@@ -1,0 +1,12 @@
+.sidebar-menu{
+    background: red($color: #000000);
+    &__icon-menu{
+        width: 25px;
+        &__icon-img{
+            width: 100%;
+        }
+    }
+    &__menu-tiems{
+        background: aqua;
+    }
+}
