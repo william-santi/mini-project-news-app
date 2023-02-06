@@ -1,0 +1,67 @@
+:root {
+    --color-background: #f8f8f8;
+    --color-texto: #FF0000;
+    --color-dark-empresa: #111;
+}
+
+html,
+body,
+div,
+article,
+aside,
+footer,
+nav,
+section,
+time {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ color: var(--color-texto);
+}
+ 
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+ display: block;
+}
+ 
+body {
+ line-height: 1;
+ box-sizing: border-box;
+}
+
+html {
+    font-family: "Cube-p", serif;
+    font-size: 13px;
+}
+
+#root,html,body {
+    height: 100%;
+    background: var(--color-background);
+}
+
+a,button,
+[type="button"],
+[type="submit"],
+[role="button"] {
+    cursor: pointer;
+}
+ 
+a {
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+
+@import "./variables/";
+@import "./page/";
+@import "./components/";
