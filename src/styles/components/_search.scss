@@ -1,0 +1,25 @@
+.search{
+    display: flex;
+    border-left: 1px solid $semi-dark;
+    height: 30px;
+    align-self: center;
+
+    &__input-search{
+        background: transparent;
+        border: 0;
+        color: $light;
+        flex: 1 1;
+        font-size: 14px;
+        outline: none;
+        padding-left: 12px;
+    }
+    &__btn-search{
+        background: transparent;
+        border: none;
+        padding-top: 4px;
+    }
+    @media screen and (max-width:$max-desktop){
+        position: absolute;
+        right: 10px;
+    }
+}
