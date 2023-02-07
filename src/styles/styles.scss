@@ -1,7 +1,13 @@
+* {
+    margin:0;
+    padding:0;
+}
+
 :root {
     --color-background: #f8f8f8;
     --color-texto: #FF0000;
     --color-dark-empresa: #111;
+    --color-dark-text:#000
 }
 
 html,
@@ -16,7 +22,7 @@ time {
  margin: 0;
  padding: 0;
  border: 0;
- color: var(--color-texto);
+ color: var(--color-dark-text);
 }
 
 article,

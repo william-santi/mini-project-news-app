@@ -47,7 +47,7 @@ export const Slider = () => {
     return (
         <div className={classes.slider}>
             <div>
-                <img src={listArticles[currentArticle]?.urlToImage} className={loaded ? classes.loaded : classes.image} alt='article-image' onLoad={() => setLoaded(true)}/>
+                <img src={listArticles[currentArticle]?.urlToImage} className={loaded ? classes.loaded : classes.image} alt={listArticles[currentArticle]?.title} onLoad={() => setLoaded(true)}/>
                 <h1 className={classes.title}>{listArticles[currentArticle]?.title}</h1>
             </div>
             <div className={classes.icons}>

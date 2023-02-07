@@ -1,3 +1,26 @@
-.content {
-    padding-top: 60px;
+.home{
+    &__section{
+        padding: 82px 20px 0;
+        h2{
+            border-left: 2px solid $semi-dark;
+            padding-left: 10px;
+        }
+        &__article{
+            display: grid;
+            gap: 3em;
+            grid-template-columns: repeat(4,1fr);
+            justify-content: center;
+            margin-top: 3em;
+        }
+        @media (max-width:$mobile) {
+            &__article{
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+        @media (min-width:$tablet) and (max-width:$max-desktop) {
+            &__article{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+    }
 }
