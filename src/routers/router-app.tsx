@@ -1,5 +1,5 @@
 import { BrowserRouter,Route,Routes,Navigate} from 'react-router-dom';
-import { Navbar } from '../components/navbar/navbar';
+import { Navbar } from '../components/sidebar/navbar';
 import {routes} from '../routers/routes';
 
 
@@ -9,11 +9,11 @@ export const Router = () => {
       <Navbar />
       <Routes>
         {
-          routes.map( ({name, Component}) => (
-            <Route key={name} path={name} element={<Component />} />
+          routes.map( ({name,path, Component}) => (
+            <Route key={name} path={path} element={<Component />} />
           ))
         }
-        <Route path="/*" element={ <Navigate to="home" replace /> } />
+        <Route path="*" element={ <Navigate to="/" replace /> } />
       </Routes>
     </BrowserRouter>
   )

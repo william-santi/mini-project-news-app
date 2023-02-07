@@ -18,8 +18,7 @@ time {
  border: 0;
  color: var(--color-texto);
 }
- 
-/* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 figcaption,
@@ -38,7 +37,7 @@ body {
 }
 
 html {
-    font-family: "Cube-p", serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 13px;
 }
 
@@ -62,6 +61,6 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: normal;
 }
 
+@import './variables/';
 @import './components/';
-@import "./variables/";
 @import "./page/";
