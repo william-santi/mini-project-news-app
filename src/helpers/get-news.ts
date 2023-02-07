@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apikey = 'e4b12bf3e5fa402eb75a8448c0f5a57b'
+const apikey = '1101235405a64588a1e46858f8c3a8eb'
 const baseUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apikey}`
 
 export const getNews = async(category:string = 'general',pageSize:number=20, query:string = '') => {
