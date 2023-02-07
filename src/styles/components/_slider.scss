@@ -1,5 +1,6 @@
 .slider {
-    padding: 40px 40px;
+    margin-top: 30px;
+    padding: 40px;
     &__article-img {
         width: 100%;
         height: 300px;
@@ -14,6 +15,12 @@
     &__article-title {
         color: var(--color-dark-empresa);
         font-weight: 600;
+        margin: 15px 0;
+        line-height: 33px;
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
     }
 
     &__icons {
