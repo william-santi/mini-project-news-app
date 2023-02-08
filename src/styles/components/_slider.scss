@@ -1,5 +1,5 @@
 .slider {
-    margin-top: 30px;
+    margin-top: 50px;
     padding: 40px;
     &__article-img {
         width: 100%;
@@ -33,7 +33,7 @@
         }
     }
 
-    .button {
+    &__button {
         background: none;
         color: inherit;
         border: none;
