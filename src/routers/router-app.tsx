@@ -1,12 +1,11 @@
 import { BrowserRouter,Route,Routes,Navigate} from 'react-router-dom';
-import { Navbar } from '../components/sidebar/navbar';
+import {Header} from '../components/header/header';
 import {routes} from '../routers/routes';
-
 
 export const Router = () => {
   return (
     <BrowserRouter>
-      <Navbar />
+      <Header />
       <Routes>
         {
           routes.map( ({name,path, Component}) => (
