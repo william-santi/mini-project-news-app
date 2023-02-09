@@ -12,7 +12,6 @@ export interface Main {
 }
 
 export interface Article {
-    source:      Source;
     author:      null | string;
     title:       string;
     description: string;

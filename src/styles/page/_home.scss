@@ -1,6 +1,9 @@
 .home{
+    &__line{
+        margin: 0 20px;
+    }
     &__section{
-        padding: 82px 20px 0;
+        padding:34px 20px 20px;
         h2{
             border-left: 2px solid $semi-dark;
             padding-left: 10px;
