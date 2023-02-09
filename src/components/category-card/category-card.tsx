@@ -27,7 +27,7 @@ export const CategoryCard: React.FC<Props> = ({article}) => {
     return (
         <div className={classes.category}>
             <article className={classes.article}>
-                <img src={urlToImage} className={classes.image}/>
+                <img src={urlToImage} className={classes.image} alt={title}/>
                 <span className={classes.date}>{date}</span>
                 <h2>{title}</h2>
                 <p>{description}</p>
