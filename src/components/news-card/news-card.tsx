@@ -21,12 +21,12 @@ export const NewsCard: React.FC<Props> = ({article}) => {
 
   return (
     <div className={classes.newsCard}>
-      <a href={`/note/${title}`} className={classes.cardLink}>
+      <a itemProp='url' href={`/news/${title}`} className={classes.cardLink}>
       <img src={urlToImage} alt={title} className={classes.cardImg} />
       <article className={classes.textWrap}>
-        <h1 className={classes.title}>{title}</h1>
+        <h1 itemProp='title' className={classes.title}>{title}</h1>
         <div className={classes.detailsWrap}>
-          <p className={classes.excerpt}>{description}</p>
+          <p itemProp='desc' className={classes.excerpt}>{description}</p>
         </div>
       </article>
       </a>
