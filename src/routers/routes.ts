@@ -8,6 +8,12 @@ export const routes:Route[] = [
         Component: Home,
         name:'genaral'
     },
+    // {
+    //     to:'/news',
+    //     path:'/news',
+    //     Component: News,
+    //     name:'news'
+    // },
     {
         to:'/business',
         path:'/business',

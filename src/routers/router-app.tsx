@@ -17,6 +17,7 @@ export const Router = () => {
         <Route path="/news/:id" element={<News />}/>
         
         <Route path="*" element={ <Navigate to="/" replace /> } />
+        
       </Routes>
       <Footer/>
     </BrowserRouter>
