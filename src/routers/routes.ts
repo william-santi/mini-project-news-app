@@ -1,4 +1,4 @@
-import { Home, News, Categories} from '../pages';
+import { Home, Categories} from '../pages';
 import {Route} from '../interface/interface';
 
 export const routes:Route[] = [
@@ -6,25 +6,19 @@ export const routes:Route[] = [
         to:'/',
         path:'/',
         Component: Home,
-        name:'home'
+        name:'genaral'
     },
     {
-        to:'/news',
-        path:'/news',
-        Component: News,
-        name:'news'
-    },
-    {
-        to:'/categories',
-        path:'/categories',
+        to:'/business',
+        path:'/business',
         Component: Categories,
-        name:'categories'
+        name:'business'
     },
     {
-        to:'/entertaiment',
-        path:'/entertaiment',
+        to:'/entertainment',
+        path:'/entertainment',
         Component: Categories,
-        name:'entertaiment'
+        name:'entertainment'
     },
     {
         to:'/health',
@@ -45,9 +39,9 @@ export const routes:Route[] = [
         name:'sports'
     },
     {
-        to:'/tecnology',
-        path:'/tecnology',
+        to:'/technology',
+        path:'/technology',
         Component: Categories,
-        name:'tecnology'
+        name:'technology'
     },
 ];
