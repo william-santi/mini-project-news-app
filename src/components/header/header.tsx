@@ -1,11 +1,12 @@
-import {Navbar} from "../sidebar/navbar"
+import {Navbar} from "../navbar/navbar"
 import {NavLink} from 'react-router-dom';
+/*import {OptionsFecha} from "../interface/interface"; */
 
 export const Header = () => {
 
     const fecha = new Date();
 
-    const options: any  =  {
+    const options: any=  {
         weekday: "long",
         year: "numeric",
         month: "long",
@@ -51,7 +52,10 @@ export const Header = () => {
                 </div>  
             </div>
             <div className ="logo">
-                <a href= "/" ><img src="news_app_2.svg" alt="logo" /></a>
+                <a href= "/" ><img src="news_app_2.svg" alt="LogoNewsApp" /></a>
+            </div>
+            <div className ="logo_responsivo">
+                <a href= "/" ><img src="news-app-vertical.svg" alt="LogoNewsApp-V" /></a>
             </div>
             <Navbar/>
         </section>

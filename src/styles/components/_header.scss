@@ -1,43 +1,33 @@
-$color_1: #fff;
-$color_2: red;
-$color_3: rgb(176, 146, 71);
-$font-family_1: 'Oswald';
 $font-family_2: 'Quicksand';
-$background-color_1: rgb(176, 146, 71);
-$background-color_2: black;
-$background-color_3: #000;
-$background-color_4: #202020;
 
 .header {
 	display: flex;
 	width: 100%;
 	.material-icons {
-		color: $color_1;
+		color: $light;
 	}
     flex-direction: column;
 }
 .navbar-top{
-    font-family: 'Quicksand';
-    font-size: 10px;
 	width: 100%;
 	height: 48px;
 	display: flex;
-	color: $color_1;
+	color: $light;
 	align-items: last baseline;
 	justify-content: space-between;
 	font-family: $font-family_2;
-	font-size: 13px;
+	font-size: 18px;
 	span {
 		justify-content: right;
         padding-right: 40px;
         .span-class {
             justify-content: right;
-            color: $color_1;
+            color: $light;
         }
 	}
 	i {
 		padding: 10px;
-		color: $color_2;
+		color: $light;
 	}
     .fecha-father{
         display: flex;
@@ -49,64 +39,46 @@ $background-color_4: #202020;
         float: left;
 	}
 }
+
 span {
 	padding: 10px;
 }
 .header {
-	background-color: $background-color_2;
+	background-color: $dark1;
 	text-align: center;
 	height: 200px;
 }
 .logo {
 	align-items: center;
 	justify-content: center;
-	background-color: $background-color_3;
+	background-color: $dark1;
 	min-width: 70px;
 }
-.buscar {
-	color: $color_1;
-	margin: 0;
-	display: flex;
-	align-items: center;
-	padding: 15px;
-	height: 40px;
-	border-radius: 40px;
-	background-color: $background-color_4;
-	float: right;
-	.boton {
-		width: 40px;
-		height: 40px;
-		text-decoration: none;
-		color: $color_1;
-		font-size: 30px;
+
+.logo_responsivo {
+	height: 100%;
+	width: 100%;
+	background-color: $dark1;
+
+}
+
+.navbar-top{
+	width: 100%;
+	@include tablet{
+			font-size: 13px;
 	}
 }
-.buscarTexto {
-	border: none;
-	background: none;
-	outline: none;
-	color: $color_1;
-	float: left;
-	line-height: 60px;
-	transition: .3s;
-	width: 0;
-}
-.boton {
-	&:hover {
-		color: $color_3;
+
+.logo {
+ 	@include tablet{
+		display:none;
 	}
 }
-#expand_more {
-	&:hover {
-		color: $color_3;
-	}
-}
-@media screen and (min-width:480px) {
-	.buscar {
-		&:hover {
-			>.buscarTexto {
-				width: 190px;
-			}
-		}
-	}
-}
+
+span {
+	@include tablet{
+	   display:none;
+   }
+} 
+
+ 

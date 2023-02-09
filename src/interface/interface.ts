@@ -25,3 +25,13 @@ export interface Source {
     id:   null | string;
     name: string;
 }
+ 
+
+export interface OptionsFecha {
+    weekday:    string;
+    year:       string;
+    month:      string;
+    day:        string;
+    hour:       string;
+    minute:     string;
+}
