@@ -9,104 +9,36 @@ $background-color_3: #000;
 $background-color_4: #202020;
 
 .header {
-	display: flex;
 	width: 100%;
-	.material-icons {
-		color: $color_1;
+	background-color: var(--color-dark-empresa);
+
+	&__img-logo {
+		width: 70%;
 	}
-    flex-direction: column;
+
+	&__session {
+		display: flex;
+		gap: 16px;
+		a {
+			color: $light;
+		}
+	}
 }
 .navbar-top{
     font-family: 'Quicksand';
-    font-size: 10px;
-	width: 100%;
-	height: 48px;
-	display: flex;
 	color: $color_1;
-	align-items: last baseline;
-	justify-content: space-between;
 	font-family: $font-family_2;
-	font-size: 13px;
-	span {
-		justify-content: right;
-        padding-right: 40px;
-        .span-class {
-            justify-content: right;
-            color: $color_1;
-        }
-	}
-	i {
-		padding: 10px;
-		color: $color_2;
-	}
-    .fecha-father{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-left: 60px;
-    }
-	.fecha {
-        float: left;
-	}
-}
-span {
-	padding: 10px;
-}
-.header {
-	background-color: $background-color_2;
-	text-align: center;
-	height: 200px;
-}
-.logo {
-	align-items: center;
-	justify-content: center;
-	background-color: $background-color_3;
-	min-width: 70px;
-}
-.buscar {
-	color: $color_1;
-	margin: 0;
+	font-size: 20px;
+	padding: 16px;
 	display: flex;
-	align-items: center;
-	padding: 15px;
-	height: 40px;
-	border-radius: 40px;
-	background-color: $background-color_4;
-	float: right;
-	.boton {
-		width: 40px;
-		height: 40px;
-		text-decoration: none;
-		color: $color_1;
-		font-size: 30px;
-	}
+	justify-content: space-between;
 }
-.buscarTexto {
-	border: none;
-	background: none;
-	outline: none;
-	color: $color_1;
-	float: left;
-	line-height: 60px;
-	transition: .3s;
-	width: 0;
-}
-.boton {
-	&:hover {
-		color: $color_3;
-	}
-}
-#expand_more {
-	&:hover {
-		color: $color_3;
-	}
-}
-@media screen and (min-width:480px) {
-	.buscar {
-		&:hover {
-			>.buscarTexto {
-				width: 190px;
-			}
-		}
+
+@media screen and (max-width:$mobile) {
+    .navbar-top {
+		font-size: 14px;
+		flex-direction: column;
+		gap: 12px;
+		align-items: center;
 	}
 }

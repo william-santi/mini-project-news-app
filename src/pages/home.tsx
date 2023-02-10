@@ -13,7 +13,7 @@ export const Home = () => {
     const {articles} = useArticle();
     const cards = articles.slice(4,8);
     return (
-        <>
+        <div className={classes.home}>
             <Slider />
             <hr className={classes.line} />
             <section className={classes.section}>
@@ -28,6 +28,7 @@ export const Home = () => {
                     }
                 </article>
             </section>
-        </>
+
+        </div>
     )
 }

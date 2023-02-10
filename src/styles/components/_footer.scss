@@ -1,0 +1,119 @@
+.footer {
+    background-color: var(--color-dark-empresa);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 30px 30px;
+
+    &__section-links {
+        list-style: none;
+        li {
+            padding-bottom: 16px;
+        }
+    }
+
+    &__section-social-media {
+        display: flex;
+        gap: 4px;
+    }
+
+
+    &__section-form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__button {
+        width: 80%;
+        border: none;
+        border-radius: 4px;
+        font-family: 'Oswald', sans-serif;
+        font-size: 10px;
+        color: $light;
+        background-color: var(--color-texto);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 6px;
+        cursor: pointer;
+    }
+
+    &__paragraph {
+        color: $light;
+        padding-bottom: 10px;
+    }
+
+    &__title {
+        color: $light;
+        padding-bottom: 20px;
+        position: relative;
+        display: inline-block;
+    }
+
+
+    &__title::before {
+        color: $light;
+        padding-bottom: 20px;
+        content: '';
+        border-bottom: 2px solid var(--color-texto);
+        position: absolute;
+        bottom: 16px;
+        width: 50px;
+        left: 0;
+    }
+
+    &__title::before {
+        color: $light;
+        padding-bottom: 20px;
+        content: '';
+        border-bottom: 2px solid var(--color-texto);
+        position: absolute;
+        bottom: 16px;
+        width: 0;
+        transition: 0.3s;
+    }
+
+    &__title:hover::before {
+        width: 60%;
+    }
+
+    .item {
+        a {
+            color: $light;
+        }
+    }
+}
+
+.input {
+    &__container {
+        border-radius: 4px;
+        background-color: $light;
+        display: flex;
+        align-items: center;
+        gap:0.5rem;
+        padding: 7px 3px;
+    }
+
+    &__content {
+        padding: 0;
+        margin: 0;
+        border: none;
+        width: fit-content;
+    }
+
+    &__content::placeholder {
+        font-family: 'Oswald', sans-serif;
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    &__content:focus {
+        outline: none;
+    }
+}
+
+@media screen and (max-width:$max-desktop) {
+    .footer {
+        gap: 15px;
+    }
+}
