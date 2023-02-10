@@ -12,6 +12,7 @@ export const getNews = async(category:string = 'general',pageSize:number=20, que
                 apikey:apikey,
                 q:query
             }
+
         }).then(({data}:{data:any}) => {
             return data.articles;
         }).catch ( (err) => console.log(err))

@@ -1,0 +1,23 @@
+.categories {
+    &__container {
+        display: relative;
+    }
+
+    &__section{
+        height: 100%;
+        padding: 82px 20px 0;
+
+        &__article{
+            columns: 3 200px;
+            column-gap: 70px;
+            column-rule: 1px solid $dark1;
+        }
+
+        &__title {
+            font-weight: 400;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding-bottom: 30px;
+        }
+    }
+}

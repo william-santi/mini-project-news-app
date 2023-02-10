@@ -27,10 +27,11 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        &--dot {
-            display: flex;
-            gap: 8px;
-        }
+    }
+
+    &__dot {
+        display: flex;
+        gap: 8px;
     }
 
     &__button {
@@ -47,21 +48,20 @@
 }
 
 .current-color {
-    fill: var(--color-texto)
+    fill: var(--color-texto);
 }
 
 @media screen and (max-width:$tablet) {
     .slider {
-        padding-top: 42px;
-        
-        &__article-img {
-            height: 350px;
-        }
+        // margin-top: 50px;
 
-        &__icons {
-            &--dot {
-                gap: 6px;
-            }
+        &__article-title {
+            overflow: visible;
+            display: block;
+        }
+        
+        &__dot {
+            gap: 6px;
         }
 
         .size {

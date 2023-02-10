@@ -1,6 +1,7 @@
 import { NewsCard } from '../components/news-card/news-card';
 import { useArticle } from '../hook/use-news';
 import { Slider } from '../components/slider/slider';
+import { Footer } from '../components/footer/footer';
 
 const classes = {
     home:       'home',
@@ -28,7 +29,7 @@ export const Home = () => {
                     }
                 </article>
             </section>
-
+            <Footer/>  
         </div>
     )
 }
