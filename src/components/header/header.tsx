@@ -1,12 +1,18 @@
 import {Navbar} from "../navbar/navbar"
 import {NavLink} from 'react-router-dom';
-/*import {OptionsFecha} from "../interface/interface"; */
 
+const classes = {
+    header:         'header',
+    navbarTop:      'header__navbar-top',
+    fechaFather:    'header__navbar-top__fecha-father',
+    fecha:          'header__navbar-top__fecha-father__fecha',
+    logo:           'header__logo',
+    logoResponsivo: 'header__logo-responsivo',
+    imgLogoV:       'header__logo-responsivo__img-logo-v',
+}
 export const Header = () => {
-
     const fecha = new Date();
-
-    const options: any=  {
+    const options: Intl.DateTimeFormatOptions=  {
         weekday: "long",
         year: "numeric",
         month: "long",
@@ -15,19 +21,17 @@ export const Header = () => {
         minute: "numeric"
     }
     const fechaPulida = fecha.toLocaleDateString('es', options);
-
-
     return (
-        <section className ="header">
-            <div className ="navbar-top">
-                <div className="fecha-father">
-                    <div className="fecha">
+        <section className ={classes.header}>
+            <div className ={classes.navbarTop}>
+                <div className={classes.fechaFather}>
+                    <div className={classes.fecha}>
                         <i className="material-icons tiny">schedule </i>
                     </div>
-                    <div className="fecha">
+                    <div className={classes.fecha}>
                         <p>
                             {fechaPulida}
-                        </p>
+                        </p>     
                     </div>              
                 </div>  
                 <div> 
@@ -51,11 +55,11 @@ export const Header = () => {
                     </span  >
                 </div>  
             </div>
-            <div className ="logo">
+            <div className ={classes.logo}>
                 <a href= "/" ><img src="news_app_2.svg" alt="LogoNewsApp" /></a>
             </div>
-            <div className ="logo_responsivo">
-                <a href= "/" ><img src="news-app-vertical.svg" alt="LogoNewsApp-V" /></a>
+            <div className ={classes.logoResponsivo}>
+                <a href= "/" ><img src="news-app-vertical.svg" alt="LogoNewsApp-V" className={classes.imgLogoV}/></a>
             </div>
             <Navbar/>
         </section>

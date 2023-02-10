@@ -34,14 +34,21 @@ $font-family_2: 'Quicksand';
         align-items: center;
         justify-content: center;
         padding-left: 60px;
+		@include tablet{
+			font-size: 13px;
+		}
     }
 	.fecha {
         float: left;
 	}
+
 }
 
 span {
 	padding: 10px;
+	@include tablet{
+		display:none;
+	}
 }
 .header {
 	background-color: $dark1;
@@ -53,32 +60,21 @@ span {
 	justify-content: center;
 	background-color: $dark1;
 	min-width: 70px;
+	@include tablet{
+		display:none;
+	}
 }
 
 .logo_responsivo {
 	height: 100%;
 	width: 100%;
 	background-color: $dark1;
-
-}
-
-.navbar-top{
-	width: 100%;
-	@include tablet{
-			font-size: 13px;
+	@include min-tablet {
+		display: none;
 	}
 }
-
-.logo {
- 	@include tablet{
-		display:none;
-	}
-}
-
-span {
-	@include tablet{
-	   display:none;
-   }
-} 
-
  
+.img-logo-v{
+	width: 90%;
+	height: 90%;
+}

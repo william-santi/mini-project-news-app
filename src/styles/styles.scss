@@ -8,6 +8,7 @@
     --color-texto: #FF0000;
     --color-dark-empresa: #111;
     --color-dark-text:#000
+    --background-color: #000;
 }
 
 html,
@@ -69,3 +70,4 @@ h1,h2,h3,h4,h5,h6 {
 @import './variables/';
 @import './components/';
 @import "./page/";
+ 
