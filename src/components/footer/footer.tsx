@@ -17,7 +17,7 @@ export const Footer = () => {
     return (
         <footer className={classes.footer}>
             <div>
-                <h1 className={classes.title}>News App</h1>
+                <h1 itemProp='news-app' className={classes.title}>News App</h1>
                 <ul className={classes.links}>
                     <li><NavLink to='/'>HomePage</NavLink></li>
                     <li><NavLink to='/news'>News</NavLink></li>
@@ -26,7 +26,7 @@ export const Footer = () => {
                 </ul>
             </div>
             <div>
-                <h2 className={classes.title}>Category</h2>
+                <h2 itemProp='category' className={classes.title}>Category</h2>
                 <ul className={classes.links}>
                     <li><NavLink to='/health'>Health</NavLink></li>
                     <li><NavLink to='/entertaiment'>Entertaiment</NavLink></li>
@@ -35,7 +35,7 @@ export const Footer = () => {
                 </ul>
             </div>
             <div>
-                <h2 className={classes.title}>Follow us</h2>
+                <h2 itemProp='social-media' className={classes.title}>Follow us</h2>
                     <div className={classes.socialMedia}>
                         <a href='/#' target="_blank">
                             <svg width="29" height="38" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +62,7 @@ export const Footer = () => {
                     </div>
             </div>
             <div>
-                <h2 className={classes.title}>Premium</h2>
+                <h2 itemProp='Premium' className={classes.title}>Premium</h2>
                 <p className={classes.paragraph}>Subscribe for more news</p>
                 <div className={classes.premium}>
                     <div className={classes.inputContainer}>
