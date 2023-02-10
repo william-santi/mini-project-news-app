@@ -28,9 +28,9 @@ export const CategoryCard: React.FC<Props> = ({article}) => {
         <div className={classes.category}>
             <article className={classes.article}>
                 <img src={urlToImage} className={classes.image} alt={title}/>
-                <span className={classes.date}>{date}</span>
-                <h2>{title}</h2>
-                <p>{description}</p>
+                <span itemProp='date' className={classes.date}>{date}</span>
+                <h2 itemProp='title'>{title}</h2>
+                <p itemProp='description'>{description}</p>
             </article>
             <button className={classes.button}>
                 Read more 
