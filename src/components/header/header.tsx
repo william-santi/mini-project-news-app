@@ -1,17 +1,9 @@
-import {Navbar} from "../navbar/navbar";
+import {Navbar} from "../navbar/navbar"
 import {NavLink} from 'react-router-dom';
 
-const classes = {
-    logo:       'header__img-logo',
-    navbarTop:  'navbar-top',
-    session:    'header__session',
-}
-
 export const Header = () => {
-
     const fecha = new Date();
-
-    const options: any  =  {
+    const options: Intl.DateTimeFormatOptions=  {
         weekday: "long",
         year: "numeric",
         month: "long",
@@ -20,22 +12,21 @@ export const Header = () => {
         minute: "numeric"
     }
     const fechaPulida = fecha.toLocaleDateString('es', options);
-
     return (
-        <section className ="header">
-            <div className = {classes.navbarTop}>
-                {/* <div className="fecha-father"> */}
-                    {/* <div className="fecha">
+        <section className ={classes.header}>
+            <div className ={classes.navbarTop}>
+                <div className={classes.fechaFather}>
+                    <div className={classes.fecha}>
                         <i className="material-icons tiny">schedule </i>
-                    </div> */}
-                    {/* <div className="fecha"> */}
+                    </div>
+                    <div className={classes.fecha}>
                         <p>
                             {fechaPulida}
-                        </p>
-                    {/* </div>               */}
-                {/* </div>   */}
-                <div className={classes.session}> 
-                    {/* <span>  */}
+                        </p>     
+                    </div>              
+                </div>  
+                <div> 
+                    <span> 
                         <NavLink 
                            to="/login"
                            className="span-class"
@@ -55,8 +46,11 @@ export const Header = () => {
                     {/* </span  > */}
                 </div>  
             </div>
-            <div className ="logo">
-                <a href= "/" ><img src="news_app_2.svg" alt="logo" className={classes.logo}/></a>
+            <div className ={classes.logo}>
+                <a href= "/" ><img src="news_app_2.svg" alt="LogoNewsApp" /></a>
+            </div>
+            <div className ={classes.logoResponsivo}>
+                <a href= "/" ><img src="news-app-vertical.svg" alt="LogoNewsApp-V" className={classes.imgLogoV}/></a>
             </div>
             <Navbar/>
         </section>
