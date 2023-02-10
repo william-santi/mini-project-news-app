@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { Main } from '../interface/interface';
 
-const apikey = '1101235405a64588a1e46858f8c3a8eb';
-const baseUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apikey}`;
+const apikey = '623686037cc046d9a78384bafee97a78';
+const baseUrl = `https://newsapi.org/v2/top-headlines?apiKey=${apikey}`;
 
 export const getNews = async(category:string = 'general',pageSize:number=20, query:string = '') => {
     if(query) {
@@ -11,9 +12,12 @@ export const getNews = async(category:string = 'general',pageSize:number=20, que
                 apikey:apikey,
                 q:query
             }
-        }).then(({data}:{data:any}) => {
+        }).then(({data}:{data:Main}) => {
             return data.articles;
-        }).catch ( (err) => console.log(err))
+        }).catch( e => {
+            console.log(e)
+            return []
+        })
     }else {
         return axios.get(baseUrl,{
             params:{
@@ -22,8 +26,11 @@ export const getNews = async(category:string = 'general',pageSize:number=20, que
                 category,
                 pageSize
             }
-        }).then(({data}:{data:any}) => {
+        }).then(({data}:{data:Main}) => {
             return data.articles;
-        }).catch( err => console.log(err))
+        }).catch( e => {
+            console.log(e)
+            return []
+        })
     }
 }

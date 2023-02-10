@@ -19,7 +19,7 @@ export const useArticle = () => {
     
     const getNote = async() => {
         const data:Article[] = await getNews();
-        const dataArticles:Article[] = data.slice(0,4);
+        const dataArticles =  data.slice(0,4);
         
         setArticles(data);
         setListArticles(dataArticles);
@@ -76,5 +76,25 @@ export const useCategories= (category:string = '') => {
     return {
         loading,
         categories
+    }
+}
+
+export const useNewsArticles= (query:string = '') => {
+    const [loading, setloading] = useState(true);
+    const [globalNews, setGlobalNews ] = useState<Article[]>([]);
+
+    useEffect(() => {
+        getGlobalNews()
+        //eslint-disable-next-line
+    }, [query]) 
+
+    const getGlobalNews = async() => {
+        const data:Article[] = await getNews('',10,query);
+        setGlobalNews(data)
+        setloading(false)
+    }
+    return {
+        loading,
+        globalNews
     }
 }

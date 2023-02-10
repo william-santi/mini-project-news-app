@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {NavLink} from 'react-router-dom';
 import { routes } from '../../routers/routes';
-import { Search } from '../search/search';
+import { FormNews } from '../search/search';
 
 const classes = {
     nabar:         'navbar',
@@ -55,7 +55,7 @@ export const Navbar = () => {
                         ))
                     }
                 </ul>
-                <Search />
+                <FormNews />
             </nav>
         </header>
     )
