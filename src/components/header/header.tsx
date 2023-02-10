@@ -1,4 +1,4 @@
-import {Navbar} from "../sidebar/navbar"
+import {Navbar} from "../navbar/navbar";
 import {NavLink} from 'react-router-dom';
 
 export const Header = () => {
