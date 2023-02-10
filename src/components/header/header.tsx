@@ -1,6 +1,16 @@
 import {Navbar} from "../navbar/navbar"
 import {NavLink} from 'react-router-dom';
 
+const classes = {
+    header:         'header',
+    navbarTop:      'header__navbar-top',
+    fechaFather:    'header__navbar-top__fecha-father',
+    fecha:          'header__navbar-top__fecha-father__fecha',
+    logo:           'header__logo',
+    logoResponsivo: 'header__logo-responsivo',
+    imgLogoV:       'header__logo-responsivo__img-logo-v',
+}
+
 export const Header = () => {
     const fecha = new Date();
     const options: Intl.DateTimeFormatOptions=  {
@@ -34,8 +44,8 @@ export const Header = () => {
                             Iniciar sesión
                         </NavLink>
 
-                    {/* </span> */}
-                    {/* <span>  */}
+                     </span> 
+                     <span>  
                         <NavLink 
                            to="/register"
                            className="span-class"
@@ -43,7 +53,7 @@ export const Header = () => {
                             Registrarse
                         </NavLink>
 
-                    {/* </span  > */}
+                    </span  > 
                 </div>  
             </div>
             <div className ={classes.logo}>
