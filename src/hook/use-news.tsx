@@ -19,7 +19,7 @@ export const useArticle = () => {
 
     const getNote = async() => {
         const data:Article[] = await getNews();
-        const dataArticles:Article[] = data.slice(0,4);
+        const dataArticles = data.slice(0,4);
         
         setArticles(data);
         setListArticles(dataArticles);

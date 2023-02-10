@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import { useCategories } from '../hook/use-category';
 import { CategoryCard } from '../components/category-card/category-card';
 import { Spinner } from '../components/spinner/spinner'
+import { Footer } from "../components/footer/footer";
 
 const classes = {
     section:    'categories__section',
@@ -17,17 +18,21 @@ export const Categories = () => {
     const { categories, loading} = useCategories(path);
 
     return (
-        <section className={classes.section}>
-            <h1 className={classes.title}>{path}</h1>
-            { loading ?  <Spinner/> : 
-                <div className={classes.article}>
-                    { 
-                        categories.map((articles) => (
-                            <CategoryCard key={articles.title} article={articles}/>
-                        ))
-                    }
-                </div>
-            }
-        </section>
+        <div>
+            <section className={classes.section}>
+                <h1 className={classes.title}>{path}</h1>
+                { loading ?  <Spinner/> : 
+                    <div className={classes.article}>
+                        { 
+                            categories.map((articles) => (
+                                <CategoryCard key={articles.title} article={articles}/>
+                            ))
+                        }
+                    </div>
+                }
+            </section>
+            <Footer/>  
+
+        </div>
     )
 }

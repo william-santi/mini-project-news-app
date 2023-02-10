@@ -6,7 +6,7 @@ const classes = {
     image:         'slider__article-img',
     title:         'slider__article-title',
     icons:         'slider__icons',
-    button:        'slider__icons button',
+    button:        'slider__icons slider__button',
     dot:           'slider__dot',
     currentColor:  'current-color',
     size:          'size',

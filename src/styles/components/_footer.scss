@@ -1,9 +1,15 @@
 .footer {
-    background-color: var(--color-dark-empresa);
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    padding: 30px 30px;
+    position: absolute;
+    width: 100%;
+    margin-top: 40px;
+
+    &__section {
+        background-color: var(--color-dark-empresa);
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding: 30px 30px;
+    }
 
     &__section-links {
         list-style: none;
@@ -112,8 +118,26 @@
     }
 }
 
-@media screen and (max-width:$max-desktop) {
+@media screen and (max-width:$tablet) {
     .footer {
-        gap: 15px;
+        &__section {
+            gap: 15px;
+        }
+
+        &__title {
+            padding-bottom: 10px;
+            font-size: 18px;
+        }
+
+        &__section-links {
+            li {
+                padding-bottom: 6px;
+                font-size: 12px;
+            }
+        }
+        
+        &__section-premium {
+            width: 100%;
+        }
     }
 }
