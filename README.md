@@ -38,11 +38,21 @@ npm start
 ## Librerias, componentes o bibliotecas usados
 
 ### TypeScript
-
 [TypeScript](https://www.typescriptlang.org/) es un lenguaje de programación fuertemente tipado que se basa en JavaScript, lo que le brinda mejores herramientas a cualquier escala.
+Nos permitio definir fácilmente los PropTypes, permitiendo que sea mucho más fácil de leer y comprender y verificar los diferentes tipos de datos que usamos en el proyecto.
 
-En este caso se uso TypeScript 
+### Sass
+[Sass](https://sass-lang.com/) es el lenguaje de extensión CSS de grado profesional más maduro, estable y potente del mundo.
+Nos ayudo a trabajar de manera más dinámica con CSS, usando variables para su reutilización en el código.
+
+### Axios
+[Axios](https://axios-http.com/) es un cliente HTTP simple basado en promesas para el navegador y node.js. Axios proporciona una biblioteca fácil de usar en un paquete pequeño con una interfaz muy extensible.
+
+Nos ayudo a realizar de forma más sencilla las peticiones, además de unificar la API para la solicitudes y recibir respuestas fácil de procesar.
 
 ### React Router
+[React Router](https://reactrouter.com/en/dev/start/overview) es una colección de componentes de navegación la cual podemos usar en web o en móvil con React Native. Con esta librería vamos a obtener un enrutamiento dinámico gracias a los componentes, en otras palabras tenemos unas rutas que renderizan un componente.
+
+Nos ayudo a crear rutas fijas y rutas dinámicas.
 
 
