@@ -16,6 +16,8 @@ const classes = {
 export const Home = () => {
     const {articles} = useArticle();
     const cards = articles.slice(4,8);
+    const card = articles[2];
+
     return (
         <div className={classes.home}>
             <Slider />
@@ -34,9 +36,7 @@ export const Home = () => {
                 </article>
                 <h2 itemProp='name'>Premiun</h2>
             </section>
-            <Premiun/>
-
- 
+           <Premiun article={card}/>
         </div>
     )
 }

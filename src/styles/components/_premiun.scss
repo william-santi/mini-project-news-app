@@ -1,17 +1,19 @@
+
 .premiun {
-    padding: 150px 20px 0;
     background-color: $gold-light;
     display: grid;
-    height: 200px;
-    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    height: 250px;
+    grid-template-columns: 1fr 0.5fr;
     grid-gap: 20px 5px;
+    margin: 20px;
 
     &__premiun-img{
         width: 100%;
         object-fit: cover;
         opacity: 0;
         transition: 1;
-         opacity: 1;
+        opacity: 1;
+        height: 200px;
     }
     &__text-wrap{
         
@@ -28,19 +30,20 @@
  
         }
     }
+
     @media screen and (min-width:$min-tablet) {
         .premiun {
-            padding-top: 12px;
         
             &__premiun-img {
-                height: 10px;
+                height: 250px;
             }
- 
-        .premiun {
-            width: 120px;
-            height: 30px;
-        }
+
 
         }
     }
 } 
+
+.premiun__text-wrap__autor {
+    text-align: center;
+    padding-top: 20px;
+}
