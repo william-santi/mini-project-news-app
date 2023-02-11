@@ -37,9 +37,10 @@ export const useArticle = () => {
     }
 }
 
-export const useNews = (title:string = '') => {
+export const useNews = (category:string = '', title:string = '') => {
     const [loading, setloading] = useState(true);
     const [note, setNote ] = useState<Article>(InitArticle);
+    console.log(title)
 
     useEffect(() => {
         getNote()
@@ -47,7 +48,7 @@ export const useNews = (title:string = '') => {
     }, []) 
 
     const getNote = async() => {
-        const data:Article[] = await getNews('',1,title);
+        const data:Article[] = await getNews(category,1,title);
         if(data.length > 0) {
             setNote(data[0])
         }

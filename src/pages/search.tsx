@@ -29,7 +29,7 @@ export const Search = () => {
             {
                 globalNews.map( ({title, url, urlToImage,publishedAt, description}) => (
                    <article key={title} className={classes.container}>
-                        <a href={`/news/${title}`}>
+                        <a href={`/news/${title}/general`}>
                             <hr />
                             <div className={classes.wrapper}>
                                 <h1 itemProp='title'>{title}</h1>
