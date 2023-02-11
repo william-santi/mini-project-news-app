@@ -15,7 +15,9 @@ export const AsideArticle:React.FC<Props> = ({note}) => {
   const {urlToImage, title, author,description,publishedAt = ''} = note;
   const fixCadena = publishedAt.replace("T", " ").slice(0, -1);
   return (
-    <section className={classes.asideNote}>
+    
+    <a href={`/news/${title}`}>
+      <section className={classes.asideNote}>
         <div className={classes.imgAside}>
           <img src={urlToImage} alt={title} />
         </div>
@@ -25,7 +27,7 @@ export const AsideArticle:React.FC<Props> = ({note}) => {
           <p itemProp='desc'>{description}</p>
           <span>{author}</span>
         </div>
-        <hr />
-    </section>
+      </section>
+    </a>
   )
 }
