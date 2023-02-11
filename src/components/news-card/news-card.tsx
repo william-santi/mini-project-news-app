@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import { Article } from '../../interface/interface';
 
 interface Props {
@@ -21,15 +22,15 @@ export const NewsCard: React.FC<Props> = ({article}) => {
 
   return (
     <div className={classes.newsCard}>
-      <a itemProp='url' href={`/news/${title}`} className={classes.cardLink}>
+      <Link itemProp='url' to={`/news/${title}`} className={classes.cardLink}>
       <img src={urlToImage} alt={title} className={classes.cardImg} />
       <article className={classes.textWrap}>
         <h1 itemProp='title' className={classes.title}>{title}</h1>
         <div className={classes.detailsWrap}>
-          <p itemProp='desc' className={classes.excerpt}>{description}</p>
+          <p itemProp='desccription' className={classes.excerpt}>{description}</p>
         </div>
       </article>
-      </a>
+      </Link>
     </div>
   )
 }

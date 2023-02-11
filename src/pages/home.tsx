@@ -2,8 +2,7 @@ import { NewsCard } from '../components/news-card/news-card';
 import { useArticle } from '../hook/use-news';
 import { Slider } from '../components/slider/slider';
 import {Premiun} from '../components/premiun/premiun'
-
-
+import { Footer } from '../components/footer/footer';
 
 const classes = {
     home:       'home',
@@ -36,7 +35,8 @@ export const Home = () => {
                 </article>
                 <h2 itemProp='name'>Premiun</h2>
             </section>
-           <Premiun article={card}/>
+            <Premiun article={card}/>
+            <Footer/>  
         </div>
     )
 }

@@ -9,7 +9,6 @@
         margin: 0 auto;
         justify-content: space-between;
         padding: 0 20px;
-
     }
     &__menu-items{
         align-items: center;
@@ -53,30 +52,35 @@
         display: none;
     }
 
-    @media screen and (max-width:$max-desktop) {
+    @media screen and (max-width:1024px) {
         &__hambur {
-            display: block;
+            top: -7.3em;
+            bottom: 20px;
             cursor: pointer;
-            left: 2em;
+            display: block;
+            left: 4.3rem;
             font-size: 1.8rem;
-            transform: translate(-100%, 50%);
             padding: 4px;
             position: absolute;
-            top: -13px;
+            text-align: initial;
+            transform: translate(-100%, 50%);
             &__icon-menu{
-                width:30px;
-                height:30px;
-                position:relative;
+                align-items: center;
                 display: flex;
                 justify-content:center;
-                align-items: center;
+                height:30px;
+                position:relative;
+                text-align: initial;
+                width:30px;
             }
             &__draw{
-                width:30px;
-                height:3px;
-                border-radius:10px;
+                padding: 0%!important;
                 background:$light;
-                position:absolute
+                border-radius:10px;
+                height:3px;
+                position:absolute;
+                width:30px;
+                display: block !important;
             }
 
             &__draw::before {
@@ -104,30 +108,34 @@
                 display: flex;
                 justify-content:center;
                 align-items: center;
+                position: absolute;
+                top: 15px;
+                right: 20px;
             }
-            &__line1{
+            &__line1, &__line2{
                 width:27px;
                 height:3px;
-                background:$light;
-                transform: rotateZ(-48deg)
+                background:$dark1;
+                padding: 0!important;
+                display: block!important;
+            }
+            &__line1 {
+            transform: rotateZ(-48deg)
             }
             &__line2{
-                width:27px;
-                height:3px;
-                background:$light;
                 position:absolute;
                 transform: rotateZ(45deg)
             }
         }
         &__menu-items {
             flex-direction: column;
-            height: calc( 100% - 50px);
             left: -70%;
             margin-top: 0;
             position: fixed;
-            top: 50px;
+            top: 0;
             transition: all 0.5s ease;
             width: 70%;
+            bottom: 0;
             a{ 
                 color: $dark1;
                 font-weight: 600;
@@ -138,6 +146,8 @@
             left: 0;
             transition: all 0.6s ease;
             padding-left: 0;
+            z-index: 1;
+            bottom: 0;
         }
        
     }

@@ -8,23 +8,24 @@ export const getNews = async(category:string = 'general',pageSize:number=20, que
     if(query) {
         return axios.get(baseUrl,{
             params:{
-                language:'es',
+                language:'en',
                 apikey:apikey,
                 q:query
             }
-        }).then(({data}:{data:any}) => {
+
+        }).then(({ data }) => {
             return data.articles;
         }).catch ( (err) => console.log(err))
     }else {
         return axios.get(baseUrl,{
             params:{
-                language:'es',
+                language:'en',
                 apikey:apikey,
                 category,
                 pageSize
             }
-        }).then(({data}:{data:any}) => {
+        }).then(({ data }) => {
             return data.articles;
-        }).catch( err => console.log(err))
+        }).catch(err => console.log(err))
     }
 }

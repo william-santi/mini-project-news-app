@@ -1,12 +1,12 @@
-import { Home, Categories} from '../pages';
 import {Route} from '../interface/interface';
+import { Categories, Home} from '../pages';
 
 export const routes:Route[] = [
     {
         to:'/',
         path:'/',
         Component: Home,
-        name:'genaral'
+        name:'general'
     },
     {
         to:'/business',

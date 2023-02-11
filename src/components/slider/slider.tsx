@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { useArticle } from '../../hook/use-news';
 
 const classes = {
-    slider: 'slider',
-    image:  'slider__article-img',
-    title:  'slider__article-title',
-    icons:  'slider__icons',
-    button: 'slider__icons slider__button',
-    dot:    'slider__icons--dot',
-    currentColor:'current-color',
-    size:   'size',
-    loaded: 'slider__article-img loaded'
+    slider:        'slider',
+    image:         'slider__article-img',
+    title:         'slider__article-title',
+    icons:         'slider__icons',
+    button:        'slider__icons slider__button',
+    dot:           'slider__dot',
+    currentColor:  'current-color',
+    size:          'size',
+    loaded:        'slider__article-img loaded'
 }
 
 export const Slider = () => {
