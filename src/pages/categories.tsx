@@ -25,7 +25,7 @@ export const Categories = () => {
                     <div className={classes.article}>
                         { 
                             categories.map((articles) => (
-                                <CategoryCard key={articles.title} article={articles}/>
+                                <CategoryCard key={articles.title} path={path} article={articles}/>
                             ))
                         }
                     </div>

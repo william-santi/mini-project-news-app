@@ -22,7 +22,7 @@ export const NewsCard: React.FC<Props> = ({article}) => {
 
   return (
     <div className={classes.newsCard}>
-      <Link itemProp='url' to={`/news/${title}`} className={classes.cardLink}>
+      <Link itemProp='url' to={`/news/${title}/general`} className={classes.cardLink}>
       <img src={urlToImage} alt={title} className={classes.cardImg} />
       <article className={classes.textWrap}>
         <h1 itemProp='title' className={classes.title}>{title}</h1>
