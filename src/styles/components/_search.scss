@@ -12,13 +12,16 @@
         font-size: 14px;
         outline: none;
         padding-left: 12px;
+        @media screen and (max-width:$mobile){
+            width: 200px;
+        }
     }
     &__btn-search{
         background: transparent;
         border: none;
         padding-top: 4px;
     }
-    @media screen and (max-width:$max-desktop){
+    @media screen and (max-width:1024px){
         position: absolute;
         right: 10px;
     }

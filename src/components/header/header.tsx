@@ -1,4 +1,4 @@
-import {Navbar} from "../navbar/navbar"
+import {Navbar} from '../navbar/navbar'
 import {NavLink} from 'react-router-dom';
 
 const classes = {
@@ -57,10 +57,10 @@ export const Header = () => {
                 </div>  
             </div>
             <div className ={classes.logo}>
-                <a href= "/" ><img src="news_app_2.svg" alt="LogoNewsApp" /></a>
+                <a href= "/" ><img src="/news_app_2.svg" alt="LogoNewsApp" /></a>
             </div>
             <div className ={classes.logoResponsivo}>
-                <a href= "/" ><img src="news-app-vertical.svg" alt="LogoNewsApp-V" className={classes.imgLogoV}/></a>
+                <a href= "/" ><img src="/news-app-vertical.svg" alt="LogoNewsApp-V" className={classes.imgLogoV}/></a>
             </div>
             <Navbar/>
         </section>
