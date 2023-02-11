@@ -1,0 +1,55 @@
+
+.premiun {
+    background-color: $gold-light;
+    display: grid;
+    height: 250px;
+    grid-template-columns: 1fr 0.5fr;
+    grid-gap: 20px 5px;
+    margin: 20px;
+    border-radius: 10px;
+
+    &__premiun-img{
+        width: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: 1;
+        opacity: 1;
+        height: 200px;
+    }
+    &__text-wrap{
+        float: right;
+        text-decoration: none;
+        &__title{
+            color: $dark1;
+            overflow: hidden;
+        }
+        &__autor{
+            margin-top: 5%;
+            font-size: 13px;
+            justify-content: space-around;
+            line-height: 3em;
+            
+
+        }
+    }
+
+    @media screen and (min-width:$min-tablet) {
+        .premiun {
+        
+            &__premiun-img {
+                height: 250px;
+            }
+            &__text-wrap{
+                font-size: 10px;
+                gap: 6px;
+
+            }
+
+        }
+    }
+} 
+
+.premiun__text-wrap__autor {
+    text-align: center;
+    padding-top: 20px;
+}
