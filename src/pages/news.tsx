@@ -3,6 +3,7 @@ import { Footer } from '../components/footer/footer';
 import { AsideArticle } from '../components/aside/aside';
 import { RandonValue } from '../helpers/randon-value';
 import { useArticle, useNews } from '../hook/use-news';
+import { Spinner } from '../components/spinner/spinner';
 
 const classes = {
   news:     'news',
@@ -25,7 +26,7 @@ export const News = () => {
   const {articles} = useArticle();
   
   if (loading) {
-    return <div>loading...</div>
+    return <div><Spinner/></div>
   }
 
   if( !note || articles.length === 0) {

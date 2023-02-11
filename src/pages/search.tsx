@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Footer, NotResultsFound } from '../components';
+import { Spinner } from '../components/spinner/spinner';
 import { useNewsArticles } from '../hook/use-news';
 
 const classes = {
@@ -19,7 +20,7 @@ export const Search = () => {
         return <NotResultsFound />
     }
     if(loading) {
-        return <h1>loading...</h1>
+        return <Spinner/>
     }
 
 	return (
