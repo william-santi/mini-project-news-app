@@ -6,6 +6,7 @@
     grid-template-columns: 1fr 0.5fr;
     grid-gap: 20px 5px;
     margin: 20px;
+    border-radius: 10px;
 
     &__premiun-img{
         width: 100%;
@@ -16,18 +17,19 @@
         height: 200px;
     }
     &__text-wrap{
-        
         float: right;
         text-decoration: none;
         &__title{
             color: $dark1;
-            font-weight: 600;
-            margin: 35px 0;
             overflow: hidden;
         }
         &__autor{
-            font-size: 15px;
- 
+            margin-top: 5%;
+            font-size: 13px;
+            justify-content: space-around;
+            line-height: 3em;
+            
+
         }
     }
 
@@ -37,7 +39,11 @@
             &__premiun-img {
                 height: 250px;
             }
+            &__text-wrap{
+                font-size: 10px;
+                gap: 6px;
 
+            }
 
         }
     }
