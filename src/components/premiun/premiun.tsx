@@ -1,5 +1,7 @@
 import { Article } from '../../interface/interface';
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+
 
 interface Props {
   article: Article
@@ -26,7 +28,7 @@ export const Premiun: React.FC<Props> = ({article}) => {
             <div>
                 <div className={classes.autor}>
                     <h1>{article ? article.title: ""}</h1>
-                    <h4 className={classes.autor}>{article ? article.author: ""}</h4>
+                    <NavLink to="/suscription">Suscribete para mas..</NavLink>
                 </div>
             </div>
         </div>

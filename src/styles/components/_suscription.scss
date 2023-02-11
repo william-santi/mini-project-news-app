@@ -1,0 +1,53 @@
+.container {
+    padding: 15px;
+    text-align: center;
+}
+
+.row-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    justify-content: space-around;
+    
+}
+.card-suscription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid $semi-dark;
+    box-shadow: 0 1em 1em $semi-dark;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.suscription-img {
+    width: 50%;
+    margin: 20px;
+}
+
+.button-suscribir{
+    background-color: $gold;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    border: none;
+}
+
+.row-cards h2{
+    padding: 5px;
+}
+.link-div {
+    margin: 40px;
+}
+
+.link-suscription {
+    text-decoration: none;
+    font-size: 20px;
+    color: $gold;
+
+}
+
+.link-suscription:hover {
+    color: gray;
+}

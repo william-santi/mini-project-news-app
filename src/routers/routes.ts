@@ -1,3 +1,4 @@
+import Suscription from '../components/suscription/suscription';
 import {Route} from '../interface/interface';
 import { Categories, Home} from '../pages';
 
@@ -43,5 +44,11 @@ export const routes:Route[] = [
         path:'/technology',
         Component: Categories,
         name:'technology'
+    },
+    {
+        to:'/suscription',
+        path:'/suscription',
+        Component: Suscription,
+        name:'suscription'
     },
 ];
