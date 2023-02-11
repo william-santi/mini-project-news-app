@@ -21,8 +21,8 @@ const classes = {
 
 export const News = () => {
 
-  const {id = ''} = useParams();
-  const {loading,note} = useNews(id);
+  const {id = '',category=''} = useParams();
+  const {loading,note} = useNews(category,id);
   const {articles} = useArticle();
   
   if (loading) {
@@ -32,7 +32,7 @@ export const News = () => {
   if( !note || articles.length === 0) {
     return <div>no llega data </div>
   }
-  
+  console.log(note)
   const {title,urlToImage,content,description} =  note;
   const notes = RandonValue(articles);
  

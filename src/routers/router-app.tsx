@@ -14,7 +14,7 @@ export const Router = () => {
           ))
         }
         <Route path="/search" element={<Search />}/>
-        <Route path="/news/:id" element={<News />}/>
+        <Route path="/news/:id/:category" element={<News />}/>
 
         <Route path="*" element={ <Navigate to="/" replace /> } />
       </Routes>
