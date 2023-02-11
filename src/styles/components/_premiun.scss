@@ -1,0 +1,46 @@
+.premiun {
+    padding: 150px 20px 0;
+    background-color: $gold-light;
+    display: grid;
+    height: 200px;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    grid-gap: 20px 5px;
+
+    &__premiun-img{
+        width: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: 1;
+         opacity: 1;
+    }
+    &__text-wrap{
+        
+        float: right;
+        text-decoration: none;
+        &__title{
+            color: $dark1;
+            font-weight: 600;
+            margin: 35px 0;
+            overflow: hidden;
+        }
+        &__autor{
+            font-size: 15px;
+ 
+        }
+    }
+    @media screen and (min-width:$min-tablet) {
+        .premiun {
+            padding-top: 12px;
+        
+            &__premiun-img {
+                height: 10px;
+            }
+ 
+        .premiun {
+            width: 120px;
+            height: 30px;
+        }
+
+        }
+    }
+} 

@@ -1,6 +1,9 @@
 import { NewsCard } from '../components/news-card/news-card';
 import { useArticle } from '../hook/use-news';
 import { Slider } from '../components/slider/slider';
+import {Premiun} from '../components/premiun/premiun'
+
+
 
 const classes = {
     home:       'home',
@@ -8,6 +11,7 @@ const classes = {
     section:    'home__section',
     article:    'home__section__article',
 }
+ 
 
 export const Home = () => {
     const {articles} = useArticle();
@@ -17,6 +21,7 @@ export const Home = () => {
             <Slider />
             <hr className={classes.line} />
             <section className={classes.section}>
+                
                 <h2 itemProp='name'>Recommended</h2>
                 <article itemProp='data' className={classes.article}>
                     {
@@ -27,8 +32,11 @@ export const Home = () => {
                         ))
                     }
                 </article>
+                <h2 itemProp='name'>Premiun</h2>
             </section>
+            <Premiun/>
 
+ 
         </div>
     )
 }

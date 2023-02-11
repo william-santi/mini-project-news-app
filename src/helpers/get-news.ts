@@ -1,14 +1,14 @@
 import axios from 'axios';
 
 const apikey = process.env.REACT_APP_API_KEY;
-const baseUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apikey}`;
+const baseUrl = `https://newsapi.org/v2/top-headlines?country=mx&apiKey=${apikey}`;
 
 
 export const getNews = async(category:string = 'general',pageSize:number=20, query:string = '') => {
     if(query) {
         return axios.get(baseUrl,{
             params:{
-                language:'en',
+                language:'es',
                 apikey:apikey,
                 q:query
             }
@@ -18,7 +18,7 @@ export const getNews = async(category:string = 'general',pageSize:number=20, que
     }else {
         return axios.get(baseUrl,{
             params:{
-                language:'en',
+                language:'es',
                 apikey:apikey,
                 category,
                 pageSize
