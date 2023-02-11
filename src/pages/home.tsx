@@ -35,7 +35,8 @@ export const Home = () => {
                 </article>
                 <h2 itemProp='name'>Premiun</h2>
             </section>
-            <Premiun article={card}/>
+             <Premiun article={card}/>
+
             <Footer/>  
         </div>
     )

@@ -1,53 +1,107 @@
-.container {
+.suscription {
     padding: 15px;
     text-align: center;
+    h1{
+        font-size: 60px;
+    }
+        
+    &__row-cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+        justify-content: space-around;
+
+        
+        h2{
+            padding: 5px;
+        }
+
+        &__suscription-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid $semi-dark;
+            box-shadow: 0 1em 1em $semi-dark;
+            border-radius: 20px;
+            margin: 20px;
+            padding: 20px;
+            
+            h2{
+                font-size: 40px;
+            }
+      
+
+            &__suscription-img {
+                width: 50%;
+                margin: 20px;
+            }
+
+
+            &__button-suscription{
+                background-color: $gold;
+                padding: 15px;
+                border-radius: 15px;
+                color: white;
+                border: none;
+                width: 50%;
+
+            }
+        
+        }
+            
+        &__link {
+            margin: 40px;
+            
+            &__link-suscription {
+                text-decoration: none;
+                font-size: 20px;
+                color: $gold;
+
+            }
+
+            &__link-suscription:hover {
+                color: gray;
+            }
+        }       
+    }
 }
 
-.row-cards{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 20px;
-    justify-content: space-around;
-    
-}
-.card-suscription {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid $semi-dark;
-    box-shadow: 0 1em 1em $semi-dark;
-    border-radius: 20px;
-    margin: 20px;
-    padding: 20px;
-}
 
-.suscription-img {
-    width: 50%;
-    margin: 20px;
-}
 
-.button-suscribir{
-    background-color: $gold;
-    padding: 20px;
-    border-radius: 15px;
-    color: white;
-    border: none;
-}
 
-.row-cards h2{
-    padding: 5px;
-}
-.link-div {
-    margin: 40px;
-}
+@media screen and (max-width:$min-tablet) {
+    .suscription {
+        h1{
+            font-size: 20px;
 
-.link-suscription {
-    text-decoration: none;
-    font-size: 20px;
-    color: $gold;
+        }
+        &__row-cards {
+            h2{
+                font-size: 15px;
+            }
+            
+            
 
-}
+            &__suscription-card  {
+                font-size: 5px;
+                width: 160%;
+                padding-bottom: 0%;
+                box-shadow: none;
+                border: none;
+ 
 
-.link-suscription:hover {
-    color: gray;
+                h2{
+                    font-size: 16px;
+
+                }
+                &__button-suscription{
+                    font-size: 10px;
+                    background-color: &gold;
+                    padding-right: 20px;
+                }
+
+            }
+        }
+ 
+    }
 }
